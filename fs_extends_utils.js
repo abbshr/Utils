@@ -43,7 +43,7 @@ var rmdircSync = exports.rmdircSync = function (arg) {
     var fname = arguments.callee;
     fs.readdirSync(dir).forEach(function (sub_dir) {
       if (!sub_dir) return;
-      fname(dir + '\\' + sub_dir);
+      fname(dir + sep + sub_dir);
     });
     fs.rmdirSync(dir);
   })(arg);
